@@ -29,6 +29,17 @@ export default function HistoryList() {
               href.slice(0, 20) + (href.length > 20 ? "..." : ""),
           },
           { label: "체류시간(초)", name: "duration" },
+          {
+            label: "웹사이트",
+            render: ({ website }) =>
+              website != null ? (
+                <a href={`/websites/${website.id}`}>
+                  ({website.id}) {website.name}
+                </a>
+              ) : (
+                "-"
+              ),
+          },
           { label: "방문일시", name: "createdAt" },
         ]}
       />
