@@ -9,21 +9,27 @@ import { DetailTemplate, MainLayout } from "@/components/templates";
 import { Achievement } from "@/models";
 import { api } from "@/services";
 
+import { isValidHttpUrl } from "../websites";
+
 export default function AchievementDetail() {
   const router = useRouter();
 
   const addWebsite = async (id: number) => {
-    const websiteId = Number(prompt("추가할 웹사이트 ID를 입력하세요"));
-    if (!websiteId || Number.isNaN(websiteId)) {
-      alert("유효하지 않은 입력입니다.");
+    const url = prompt("추가할 웹사이트 URL를 입력하세요");
+    if (!url || !isValidHttpUrl(url)) {
+      alert("유효하지 않은 URL입니다.");
       return;
     }
 
     try {
-      await api.post(`/achievements/${id}/websites`, { websiteId });
+      await api.post(`/achievements/${id}/websites`, { url });
       alert("추가되었습니다.");
       router.reload();
-    } catch {}
+    } catch {
+      alert(
+        "실패했습니다.\n입력된 URL의 웹사이트가 생성되어있는지 확인해보세요"
+      );
+    }
   };
   const deleteWebsite = async (id: number) => {
     const websiteId = Number(prompt("해제할 웹사이트 ID를 입력하세요"));

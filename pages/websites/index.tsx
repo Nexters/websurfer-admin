@@ -76,7 +76,7 @@ export default function WebsiteList() {
   );
 }
 
-function isValidHttpUrl(input: string): boolean {
+export function isValidHttpUrl(input: string): boolean {
   let url;
 
   try {
