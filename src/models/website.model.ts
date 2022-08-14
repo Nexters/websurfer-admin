@@ -8,4 +8,7 @@ export class Website extends BaseId {
   name: string;
   hostname: string;
   faviconUrl: string;
+
+  canonical: Website;
+  canonicalId: number;
 }

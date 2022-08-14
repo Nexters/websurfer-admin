@@ -48,7 +48,17 @@ export default function WebsiteList() {
           },
           { label: "이름", name: "name" },
           { label: "서브도메인", name: "hostname" },
-          { label: "canonical 사이트 ID", name: "canonicalId" },
+          {
+            label: "canonical 사이트",
+            render: ({ canonical }) =>
+              canonical != null ? (
+                <a href={`/websites/${canonical.id}`}>
+                  ({canonical.id}) {canonical.name}({canonical.hostname})
+                </a>
+              ) : (
+                "-"
+              ),
+          },
         ]}
       />
     </MainLayout>
