@@ -2,7 +2,7 @@ import { MainLayout, ListTemplate } from "@/components/templates";
 
 import { History } from "@/models";
 
-export default function Users() {
+export default function HistoryList() {
   return (
     <MainLayout>
       <ListTemplate<History>
@@ -11,13 +11,12 @@ export default function Users() {
           "id",
           {
             label: "사용자",
-            render: ({ user }) => (
-              <a href={`/users/${user.id}`}>
-                ({user.id}){" "}
-                {user.email.slice(0, 10) +
-                  (user.email.length > 10 ? "..." : "")}
-              </a>
-            ),
+            render: ({ user }) =>
+              `(${user.id}) 
+                ${
+                  user.email.slice(0, 10) +
+                  (user.email.length > 10 ? "..." : "")
+                }`,
           },
           {
             label: "제목",
