@@ -40,7 +40,8 @@ const config = {
         {
           label: "서핑 태그",
           name: "achievement",
-          description: "id 1은 항상 기본값(바닷속 진주)이도록 유지해주세용",
+          description:
+            "id 1은 항상 기본값(바닷속 진주)이도록 유지해주세용\n그리고 기본값 태그에는 웹사이트를 등록하지 말아주세요!",
           searchFieldName: "name",
           searchFieldLabel: "이름",
           create: true,
