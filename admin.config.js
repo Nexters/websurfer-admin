@@ -20,10 +20,14 @@ const config = {
         {
           label: "방문기록",
           name: "history",
+          searchFieldName: "href",
+          searchFieldLabel: "주소",
         },
         {
           label: "웹사이트",
           name: "website",
+          searchFieldName: "hostname",
+          searchFieldLabel: "서브도메인",
           detail: true,
           edit: true,
         },
@@ -33,7 +37,7 @@ const config = {
       name: "시스템 관리",
       models: [
         {
-          label: "서핑태그",
+          label: "서핑 태그",
           name: "achievement",
           description: "id 1은 항상 기본값(바닷속 진주)이도록 유지해주세용",
           searchFieldName: "name",
