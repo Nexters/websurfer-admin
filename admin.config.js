@@ -33,6 +33,11 @@ const config = {
           detail: true,
           edit: true,
         },
+        {
+          label: "일일 리포트",
+          name: "daily-report",
+          detail: true,
+        },
       ],
     },
     {
