@@ -37,6 +37,7 @@ export default function WebsiteDetail() {
             ),
           },
           { label: "favicon URL", name: "faviconUrl" },
+          { label: "canonical 사이트 ID", name: "canonicalId" },
         ]}
       />
     </MainLayout>

@@ -48,6 +48,7 @@ export default function WebsiteList() {
           },
           { label: "이름", name: "name" },
           { label: "서브도메인", name: "hostname" },
+          { label: "canonical 사이트 ID", name: "canonicalId" },
         ]}
       />
     </MainLayout>
