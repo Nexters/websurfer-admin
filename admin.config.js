@@ -22,6 +22,7 @@ const config = {
           name: "history",
           searchFieldName: "href",
           searchFieldLabel: "주소",
+          detail: true,
         },
         {
           label: "웹사이트",
