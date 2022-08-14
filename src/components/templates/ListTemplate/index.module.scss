@@ -1,0 +1,48 @@
+.breadcrumb {
+  font-size: 14px;
+  color: $gray5;
+
+  margin-bottom: 32px;
+}
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  margin: 0;
+
+  font-size: 36px;
+  font-weight: 700;
+
+  .count {
+    padding: 4px 8px;
+    margin-left: 8px;
+
+    border-radius: 9999px;
+
+    background-color: $blue;
+    color: $white;
+    font-size: 12px;
+  }
+}
+.description {
+  margin: 16px 0 0 0;
+  color: $gray6;
+  font-size: 14px;
+  white-space: pre-wrap;
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+  margin: 64px 0 16px;
+}
+
+.body {
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+}

@@ -1,0 +1,99 @@
+.wrapper {
+  flex: 1;
+
+  background-color: $white;
+
+  display: block;
+  overflow-x: auto;
+
+  > table {
+    width: fit-content;
+    min-width: 100%;
+
+    border-collapse: collapse;
+
+    th,
+    td {
+      padding: 12px 0 12px 12px;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    > thead {
+      background-color: $gray8;
+      border: 1px solid $gray7;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 16px;
+
+      th {
+        font-weight: 400;
+        color: $gray2;
+      }
+    }
+    > tbody {
+      tr {
+        border-bottom: 1px solid $gray7;
+        td {
+          color: $gray3;
+        }
+
+        transition: all 0.3s;
+        &:hover {
+          background-color: $gray8;
+        }
+      }
+    }
+  }
+}
+
+.cell {
+  > svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.delete {
+  margin: 0 16px 0 auto;
+
+  cursor: pointer;
+  transition: all 0.3s;
+  &:hover {
+    color: $red;
+  }
+}
+
+.paginator {
+  display: flex;
+  flex-direction: row;
+
+  margin-left: auto;
+  width: fit-content;
+
+  > * {
+    &::before {
+      content: "";
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 32px;
+    height: 32px;
+    margin: 0 0 0 8px;
+    border-radius: 4px;
+    border: 1px solid $gray7;
+    color: $gray5;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+    &[data-current="true"],
+    &:hover {
+      border-color: $black;
+      color: $black;
+    }
+  }
+}

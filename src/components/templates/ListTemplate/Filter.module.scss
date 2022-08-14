@@ -1,0 +1,33 @@
+.wrapper {
+  width: 240px;
+  height: 100%;
+  margin-left: 28px;
+
+  background-color: $white;
+  border: 1px solid $gray7;
+  border-radius: 8px;
+
+  .title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    height: 40px;
+    padding-left: 12px;
+
+    font-weight: 700;
+    font-size: 14px;
+    color: $black;
+
+    background-color: $gray8;
+    border-bottom: 1px solid $gray7;
+  }
+
+  .inputs {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    padding: 24px 12px;
+  }
+}

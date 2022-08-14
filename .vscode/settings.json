@@ -1,0 +1,15 @@
+{
+  "editor.formatOnSave": true,
+  "conventionalCommits.scopes": [
+    "helpers",
+    "components",
+    "oages",
+    "deps",
+    "hooks",
+    "icons",
+    "models",
+    "styles",
+    "constants",
+    "services"
+  ]
+}
