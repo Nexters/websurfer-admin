@@ -50,6 +50,19 @@ export default function WebsiteDetail() {
               ),
           },
           { label: "canonical 사이트 ID", name: "canonicalId" },
+          {
+            label: "서핑태그",
+            name: "achievement",
+            render: ({ achievement }) =>
+              achievement != null ? (
+                <a href={`/achievements/${achievement.id}`}>
+                  ({achievement.id}) {achievement.name}({achievement.category})
+                </a>
+              ) : (
+                "-"
+              ),
+          },
+          { label: "서핑태그 ID", name: "achievementId" },
         ]}
       />
     </MainLayout>
