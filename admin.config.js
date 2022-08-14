@@ -55,6 +55,13 @@ const config = {
           detail: true,
           edit: true,
         },
+        {
+          label: "내부 로그",
+          name: "log",
+          description: "개발시 참고하기 위한 로그들입니다.",
+          delete: true,
+          detail: true,
+        },
       ],
     },
   ],
