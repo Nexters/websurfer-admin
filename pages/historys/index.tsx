@@ -25,8 +25,12 @@ export default function HistoryList() {
           },
           {
             label: "주소",
-            render: ({ href }) =>
-              href.slice(0, 20) + (href.length > 20 ? "..." : ""),
+            render: ({ href }) => (
+              // eslint-disable-next-line react/jsx-no-target-blank
+              <a href={href} target="_blank">
+                {href.slice(0, 20) + (href.length > 20 ? "..." : "")}
+              </a>
+            ),
           },
           { label: "체류시간(초)", name: "duration" },
           {

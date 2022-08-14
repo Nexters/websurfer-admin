@@ -31,7 +31,12 @@ export default function HistoryDetail() {
           {
             label: "주소",
             name: "href",
-            editable: false,
+            render: ({ href }) => (
+              // eslint-disable-next-line react/jsx-no-target-blank
+              <a href={href} target="_blank">
+                {href}
+              </a>
+            ),
           },
           { label: "체류시간(초)", name: "duration", editable: false },
           { label: "방문일시", name: "createdAt" },
