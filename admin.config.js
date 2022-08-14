@@ -26,6 +26,7 @@ const config = {
         {
           label: "웹사이트",
           name: "website",
+          description: "서브도메인의 'www.'는 자동으로 제거됩니다.",
           searchFieldName: "hostname",
           searchFieldLabel: "서브도메인",
           detail: true,
