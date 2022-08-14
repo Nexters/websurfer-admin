@@ -59,6 +59,17 @@ export default function WebsiteList() {
                 "-"
               ),
           },
+          {
+            label: "서핑 태그",
+            render: ({ achievement }) =>
+              achievement != null ? (
+                <a href={`/achievements/${achievement.id}`}>
+                  ({achievement.id}) {achievement.name}({achievement.category})
+                </a>
+              ) : (
+                "-"
+              ),
+          },
         ]}
       />
     </MainLayout>

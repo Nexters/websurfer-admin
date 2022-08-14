@@ -27,7 +27,8 @@ const config = {
         {
           label: "웹사이트",
           name: "website",
-          description: "서브도메인의 'www.'는 자동으로 제거됩니다.",
+          description:
+            "서브도메인의 'www.'는 자동으로 제거됩니다.\n방문기록 생성시 canonical 사이트를 우선적으로 사용합니다.",
           searchFieldName: "hostname",
           searchFieldLabel: "서브도메인",
           detail: true,
