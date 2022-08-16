@@ -67,6 +67,19 @@ export default function AchievementDetail() {
           { label: "ID", name: "id", editable: false },
           { label: "이름", name: "name" },
           { label: "카테고리(쉼표로 구분)", name: "category" },
+          {
+            label: "색상 미리보기",
+            name: "color-preview",
+            render: (v) => (
+              <div
+                style={{
+                  width: 50,
+                  height: 50,
+                  backgroundColor: v.color,
+                }}
+              />
+            ),
+          },
           { label: "색상(카드에서 사용됨)", name: "color" },
           {
             label: "이미지 미리보기",

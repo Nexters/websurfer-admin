@@ -14,7 +14,24 @@ export default function AchievementList() {
           "id",
           { label: "이름", name: "name" },
           { label: "구분", name: "category" },
-          { label: "색상", name: "color" },
+          {
+            label: "색상",
+            render: ({ color }) => (
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  gap: 8,
+                }}
+              >
+                <div
+                  style={{ width: 24, height: 24, backgroundColor: color }}
+                />
+                <p>{color}</p>
+              </div>
+            ),
+          },
           {
             label: "이미지 URL",
             render: ({ imageUrl }) => (
