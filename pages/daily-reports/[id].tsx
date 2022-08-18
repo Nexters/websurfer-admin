@@ -14,14 +14,14 @@ export default function DailyReportDetail() {
     <MainLayout>
       <DetailTemplate<DailyReport>
         name="daily-report"
-        title={(v) => `${v.date} 보고서 - ${v.user.email}`}
+        title={(v) => `${v.date} 보고서 - 사용자(${v.user.id})`}
         pk={Number(router.query.id)}
         fields={[
           { label: "ID", name: "id", editable: false },
           {
             label: "사용자",
-            name: "user",
-            render: ({ user }) => `(${user.id}) ${user.email}`,
+            name: "userId",
+            editable: false,
           },
           {
             label: "날짜",

@@ -9,8 +9,6 @@ const config = {
         {
           label: "유저(사용자)",
           name: "user",
-          searchFieldName: "email",
-          searchFieldLabel: "이메일",
         },
       ],
     },

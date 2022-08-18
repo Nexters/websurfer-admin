@@ -11,12 +11,7 @@ export default function HistoryList() {
           "id",
           {
             label: "사용자",
-            render: ({ user }) =>
-              `(${user.id}) 
-                ${
-                  user.email.slice(0, 10) +
-                  (user.email.length > 10 ? "..." : "")
-                }`,
+            name: "userId",
           },
           {
             label: "제목",

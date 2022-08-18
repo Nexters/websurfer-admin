@@ -9,9 +9,12 @@ export default function Users() {
         name="user"
         fields={[
           "id",
-          { label: "이메일", name: "email" },
           { label: "구글식별자", name: "googleTokenId" },
           { label: "가입일시", name: "createdAt" },
+          {
+            label: "hash",
+            render: ({ hash }) => hash.slice(0, 35) + "...",
+          },
         ]}
       />
     </MainLayout>

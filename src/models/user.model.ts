@@ -1,6 +1,6 @@
 import { BaseId } from "./common.model";
 
 export class User extends BaseId {
-  email: string;
+  hash: string;
   googleTokenId: string;
 }
